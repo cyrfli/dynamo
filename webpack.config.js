@@ -26,7 +26,7 @@ module.exports = {
         use: ['babel-loader', 'eslint-loader']
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss|sass)$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
@@ -34,7 +34,7 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|ttf|woff(2)?|eot|svg)$/,
         use: ['file-loader']
       }
     ]

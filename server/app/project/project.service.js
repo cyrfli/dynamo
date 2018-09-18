@@ -7,6 +7,11 @@ async function getAll() {
   return await Project.find();
 }
 
+async function getByUserId(id) {
+  const query = await Project.find({ authorId: id });
+  return query;
+}
+
 async function getById(id) {
   return await Project.findById(id);
 }
@@ -35,6 +40,7 @@ async function _delete(id) {
 
 module.exports = {
   getAll,
+  getByUserId,
   getById,
   create,
   update,

@@ -17,8 +17,8 @@ app.use(cors());
 
 app.use(jwt());
 
-app.use("/user", userRouter);
-app.use("/project", projectRouter);
+app.use("/users", userRouter);
+app.use("/projects", projectRouter);
 
 app.use(errorHandler);
 

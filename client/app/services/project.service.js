@@ -22,9 +22,29 @@ const create = (project) => {
     body: JSON.stringify(project)
   };
 
-  return fetch("/api/project", requestOptions).then(handleResponse);
+  return fetch("/api/projects", requestOptions).then(handleResponse);
+};
+
+const getAll = () => {
+  const requestOptions = {
+    method: "GET",
+    headers: assign({}, { "Content-Type": "application/json" }, authHeader())
+  };
+
+  return fetch("/api/projects", requestOptions).then(handleResponse);
+};
+
+const getByUserId = (id) => {
+  const requestOptions = {
+    method: "GET",
+    headers: assign({}, { "Content-Type": "application/json" }, authHeader())
+  };
+
+  return fetch(`/api/projects/user/${id}`, requestOptions).then(handleResponse);
 };
 
 export const projectService = {
-  create
+  create,
+  getAll,
+  getByUserId
 };

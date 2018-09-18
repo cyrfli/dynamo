@@ -5,14 +5,25 @@ injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Roboto');
   html,
   body {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Roboto', sans-serif;
     height: 100%;
     width: 100%;
-    background-color: #333;
-    display: -ms-flexbox;
-    display: flex;
-    color: #fff;
-    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+    background-color: #f6f6f6;
+  }
+  #app {
+    width: 100%;
+    height: 100%;
+  }
+  .is-shadowed { box-shadow: 3px 3px 3px 0 #ccc; }
+  .is-borderless { border: none !important; }
+  
+  .button,
+  .box, 
+  .input, 
+  .textarea,
+  .notification,
+  .navbar-dropdown,
+  .select select { 
+    border-radius: 0;
   }
 `;

@@ -3,9 +3,10 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { store } from "Helpers";
 
-import "bootstrap/dist/css/bootstrap.css";
+import "bulma";
+import "@fortawesome/fontawesome-free/css/all.css";
 
-import { App } from "Containers/App";
+import { App } from "Containers/app/App";
 
 import "./global-styles";
 

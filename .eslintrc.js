@@ -7,6 +7,7 @@ module.exports = {
     "implicit-arrow-linebreak": 0,
     "import/prefer-default-export": 0,
 
+    "jsx-a11y/alt-text": 0,
     "jsx-a11y/label-has-for": 0,
     "jsx-a11y/label-has-associated-control": [
       2,
@@ -16,13 +17,14 @@ module.exports = {
         controlComponents: ["input", "select"]
       }
     ],
-    "max-len": [2, { code: 80, ignoreComments: true }],
+    "max-len": [2, { code: 80, ignoreComments: true,  ignoreStrings: true }],
     "no-confusing-arrow": 0,
 
     "prettier/prettier": [2],
     "quotes": [2, "double"],
 
     "react/jsx-filename-extension": 0,
+    "react/jsx-one-expression-per-line": 0,
     "react/require-default-props": 0
   },
   parser: "babel-eslint",

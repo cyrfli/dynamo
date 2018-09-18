@@ -34,7 +34,7 @@ const login = (username, password) => {
     body: JSON.stringify({ username, password })
   };
 
-  return fetch("/api/user/authenticate", requestOptions)
+  return fetch("/api/users/authenticate", requestOptions)
     .then(handleResponse)
     .then((user) => {
       // login successful if there's a jwt token in the response
@@ -54,7 +54,7 @@ const register = (user) => {
     body: JSON.stringify(user)
   };
 
-  return fetch("/api/user/register", requestOptions).then(handleResponse);
+  return fetch("/api/users/register", requestOptions).then(handleResponse);
 };
 
 export const userService = {

@@ -36,9 +36,19 @@ userSchema.set("toJSON", { virtuals: true });
 
 userSchema.methods.toJSON = function() {
   const obj = this.toObject();
-  delete obj.hash;
+  obj.id = obj._id;
+  delete obj._id;
   delete obj.__v;
+  delete obj.hash;
+
   return obj;
 };
+
+/* userSchema.set('toJSON', {
+    transform: function (doc, ret) {
+        delete ret.local.password;
+        return ret;
+    }
+}); */
 
 module.exports = mongoose.model("User", userSchema);

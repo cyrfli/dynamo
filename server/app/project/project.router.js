@@ -43,9 +43,15 @@ router.delete("/:id", controller.delete);
 
 /**
 *    @apiGroup Project
-*    @api {get} / Displaying the list with existing projects.
+*    @api {get} / Displaying the list of existing projects.
 */
 router.get("/", controller.getAll);
+
+/**
+*    @apiGroup Project
+*    @api {get} /user/:id Displaying the list of existing projects.
+*/
+router.get("/user/:id", controller.getByUserId);
 
 /**
 *    @apiGroup Project
