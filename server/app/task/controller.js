@@ -1,42 +1,42 @@
-const projectService = require("./project.service");
+const taskService = require("./service");
 
 function getAll(req, res, next) {
-  projectService
+  taskService
     .getAll()
-    .then((projects) => res.json(projects))
+    .then((tasks) => res.json(tasks))
     .catch((err) => next(err));
 }
 
 function getByUserId(req, res, next) {
-  projectService
+  taskService
     .getByUserId(req.params.id)
-    .then((project) => res.json(project))
+    .then((task) => res.json(task))
     .catch((err) => next(err));
 }
 
 function getById(req, res, next) {
-  projectService
+  taskService
     .getById(req.params.id)
-    .then((project) => res.json(project))
+    .then((task) => res.json(task))
     .catch((err) => next(err));
 }
 
 function create(req, res, next) {
-  projectService
+  taskService
     .create(req.user.sub, req.body)
-    .then((project) => res.json(project))
+    .then((task) => res.json(task))
     .catch((err) => next(err));
 }
 
 function update(req, res, next) {
-  projectService
+  taskService
     .update(req.params.id, req.body)
-    .then((project) => res.json(project))
+    .then((task) => res.json(task))
     .catch((err) => next(err));
 }
 
 function _delete(req, res, next) {
-  projectService
+  taskService
     .delete(req.params.id)
     .then(() => res.json({}))
     .catch((err) => next(err));

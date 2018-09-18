@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 const Project = mongoose.model("Project");
-const User = mongoose.model("User");
 
 async function getAll() {
   return await Project.find();

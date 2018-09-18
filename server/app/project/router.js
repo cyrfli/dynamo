@@ -1,5 +1,5 @@
-require("./project.model");
-const controller = require("./project.controller");
+require("./model");
+const controller = require("./controller");
 
 const express = require("express");
 
@@ -49,7 +49,7 @@ router.get("/", controller.getAll);
 
 /**
 *    @apiGroup Project
-*    @api {get} /user/:id Displaying the list of existing projects.
+*    @api {get} /user/:id Displaying the list of existing projects for an user.
 */
 router.get("/user/:id", controller.getByUserId);
 

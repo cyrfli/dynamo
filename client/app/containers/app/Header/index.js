@@ -17,7 +17,7 @@ class Header extends React.Component {
         <Container>
           <div className="navbar-brand">
             <Brand className="navbar-item" to="/">
-              Dynamo
+              dynamo
             </Brand>
             <div className="navbar-burger burger" data-target="navbar-dynamo">
               <span />

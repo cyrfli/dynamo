@@ -1,5 +1,5 @@
 const logger = require("../../helpers/logger");
-const userService = require("./user.service");
+const userService = require("./service");
 
 function authenticate(req, res, next) {
   userService
