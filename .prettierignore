@@ -5,4 +5,4 @@ internals/scripts/
 package-lock.json
 yarn.lock
 package.json
-client/app/registerServiceWorker.js
+client/src/registerServiceWorker.js

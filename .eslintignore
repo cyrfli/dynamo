@@ -1,2 +1,2 @@
-client/app/registerServiceWorker.js
-client/app/containers/app/Footer/index.js
+client/src/registerServiceWorker.js
+client/src/containers/app/Footer/index.js

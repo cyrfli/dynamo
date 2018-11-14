@@ -8,8 +8,9 @@ const jwt = require("./helpers/jwt");
 const errorHandler = require("./helpers/error-handler");
 const logger = require("./helpers/logger");
 
-const userRouter = require("./app/user/router");
-const projectRouter = require("./app/project/router");
+const userRouter = require("./app/users/router");
+const projectsRouter = require("./app/projects/router");
+const tasksRouter = require("./app/tasks/router");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -18,7 +19,8 @@ app.use(cors());
 app.use(jwt());
 
 app.use("/users", userRouter);
-app.use("/projects", projectRouter);
+app.use("/projects", projectsRouter);
+app.use("/tasks", tasksRouter);
 
 app.use(errorHandler);
 

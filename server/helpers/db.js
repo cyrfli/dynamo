@@ -8,6 +8,7 @@ mongoose.connect(
 mongoose.Promise = global.Promise;
 
 module.exports = {
-  User: require("../app/user/model"),
-  Project: require("../app/project/model")
+  User: require("../app/users/model"),
+  Project: require("../app/projects/model"),
+  Task: require("../app/tasks/model")
 };

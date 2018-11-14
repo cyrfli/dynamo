@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   entry: {
     'app': [
-      path.resolve(__dirname, 'client/app/index.js')
+      path.resolve(__dirname, 'client/src/index.js')
     ]
   },
 
@@ -48,18 +48,9 @@ module.exports = {
   ],
 
   resolve: {
-    alias: {
-      Actions: path.resolve(__dirname, 'client/app/actions/'),
-      Components: path.resolve(__dirname, 'client/app/components/'),
-      Constants: path.resolve(__dirname, 'client/app/constants/'),
-      Containers: path.resolve(__dirname, 'client/app/containers/'),
-      Helpers: path.resolve(__dirname, 'client/app/helpers/'),
-      Reducers: path.resolve(__dirname, 'client/app/reducers/'),
-      Services: path.resolve(__dirname, 'client/app/services/')
-    },
     modules: [
       "node_modules",
-      path.resolve(__dirname, 'client/app')
+      path.resolve(__dirname, 'client/src')
     ],
     extensions: ['*', '.js', '.jsx']
   },
